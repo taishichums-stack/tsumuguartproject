@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSUMUGU ART PROJECT (ツムプロ)</title>
 
+    <!-- ファビコン（タブのアイコン）の設定 -->
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="logo.png" />
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Fonts: Zen Maru Gothic -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +20,17 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- 外部CSSファイルの読み込み -->
     <link rel="stylesheet" href="style.css" />
 
     <script>
@@ -50,6 +56,7 @@
   <body
     class="text-neutral-800 antialiased selection:bg-tsumuguPink selection:text-white"
   >
+    <!-- ==================== HEADER ==================== -->
     <header
       class="fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-md px-4 py-3 flex justify-between items-center border-b border-white/20"
     >
@@ -85,6 +92,7 @@
       </button>
     </header>
 
+    <!-- スライドナビゲーション -->
     <div
       id="slideNav"
       class="fixed inset-0 bg-white/95 backdrop-blur-lg z-50 flex flex-col justify-center items-center space-y-8 text-2xl font-bold transform translate-x-full transition-transform duration-300 ease-in-out"
@@ -102,6 +110,7 @@
       <a href="#contact" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">お問い合わせ</a>
     </div>
 
+    <!-- ==================== HERO SECTION (ファーストビュー) ==================== -->
     <section
       id="hero"
       class="hero-container bg-gradient-to-b from-[#A5D1FE] to-[#D5E9FF]"
@@ -112,6 +121,7 @@
       <div class="absolute bottom-[26%] right-8 w-8 h-8 bg-tsumuguPink rounded-full opacity-80 z-20 floating-bubble-1"></div>
       <div class="absolute bottom-[16%] right-12 w-4 h-4 bg-tsumuguPink rounded-full opacity-90 z-20 floating-bubble-2"></div>
 
+      <!-- 画面幅いっぱいの写真スライダーと波線マスク -->
       <div class="relative w-full flex-1 flex flex-col justify-center items-center pt-16 z-10">
         <div class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
           <div class="absolute top-0 left-0 w-full z-20 pointer-events-none -translate-y-1">
@@ -138,6 +148,7 @@
             </svg>
           </div>
 
+          <!-- 縦書き日本語コピー -->
           <div class="absolute right-4 md:right-10 top-0 bottom-0 z-30 flex items-center">
             <div class="emotive-vertical-text text-4xl md:text-5xl flex flex-col items-center">
               <span class="mb-4">紡ごうよ、</span>
@@ -156,13 +167,20 @@
         />
         <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white via-white/40 to-transparent z-10"></div>
         
-        <div class="relative z-20 px-6 pt-4 flex justify-start">
+        <!-- ロゴとピンクの大きなテキストを横並びに配置 -->
+        <div class="relative z-20 px-6 pt-4 flex items-center space-x-4 md:space-x-6">
           <img
             src="logo.png"
-            alt="TSUMUGU ART PROJECT"
-            class="h-20 md:h-28 lg:h-36 object-contain filter drop-shadow-[0_4px_6px_rgba(255,255,255,0.8)]"
-            onerror="this.src='https://placehold.co/400x120/4A90E2/FFF?text=TSUMUGU+ART+PROJECT'"
+            alt="ロゴ"
+            class="h-16 md:h-20 lg:h-24 object-contain filter drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] shrink-0"
+            onerror="this.src='https://placehold.co/120x120/4A90E2/FFF?text=LOGO'"
           />
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-black text-tsumuguPink tracking-wider leading-none uppercase select-none filter drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)]"
+          >
+            TSUMUGU<br />
+            <span class="text-2xl md:text-3xl lg:text-4xl tracking-widest text-tsumuguPink">ART PROJECT</span>
+          </h1>
         </div>
 
         <div class="h-6 bg-white/20 backdrop-blur-[2px] border-t border-white/40 w-full z-10 flex justify-center items-center">
@@ -171,6 +189,7 @@
       </div>
     </section>
 
+    <!-- ==================== INTRO & ABOUT SECTION ==================== -->
     <section id="about" class="bg-white py-20 px-6 relative overflow-hidden">
       <div class="max-w-xl mx-auto text-center space-y-6 text-neutral-800 relative z-10 mb-28">
         <p class="text-lg md:text-xl font-bold tracking-wider leading-relaxed text-neutral-700">
@@ -243,6 +262,7 @@
       </div>
     </section>
 
+    <!-- ==================== STAGE SECTION (1枚の大きな掲示板) ==================== -->
     <section id="stage" class="relative overflow-hidden bulletin-board-bg">
       <div class="absolute top-8 left-0 w-full text-center z-20 pointer-events-none">
         <div class="bg-white/90 backdrop-blur-md px-8 py-3 rounded-full inline-block shadow-sm border border-[#e2d5c3]">
@@ -324,6 +344,7 @@
       </div>
     </section>
 
+    <!-- ==================== NEWS SECTION ==================== -->
     <section id="news" class="py-24 bg-gradient-to-b from-sky-50 via-white to-pink-50">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -363,6 +384,7 @@
       </div>
     </section>
 
+    <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact" class="py-24 bg-white relative overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
@@ -389,17 +411,21 @@
           </div>
 
           <div class="lg:col-span-7 bg-white p-8 rounded-3xl retro-box-shadow">
+            <!-- mailto を使用したフォーム送信設定 -->
             <form action="mailto:tsumupro.art@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
               <div>
                 <label class="block text-xs font-black text-neutral-500 mb-1">お名前</label>
+                <!-- name属性を追加 -->
                 <input type="text" name="お名前" required placeholder="つむぐ 太郎" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm" />
               </div>
               <div>
                 <label class="block text-xs font-black text-neutral-500 mb-1">メールアドレス</label>
+                <!-- name属性を追加 -->
                 <input type="email" name="メールアドレス" required placeholder="your-email@example.com" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm" />
               </div>
               <div>
                 <label class="block text-xs font-black text-neutral-500 mb-1">内容</label>
+                <!-- name属性を追加 -->
                 <textarea rows="4" name="お問い合わせ内容" required placeholder="見学希望やコラボの提案など、何でもお気軽に！" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm"></textarea>
               </div>
               <button type="submit" class="w-full bg-tsumuguPink hover:bg-tsumuguPinkDark text-white py-3 px-6 rounded-xl font-black shadow-md transition-colors tracking-widest text-sm">メッセージを送信する</button>
@@ -409,6 +435,7 @@
       </div>
     </section>
 
+    <!-- ==================== FOOTER ==================== -->
     <footer class="bg-gradient-to-b from-white to-pink-100 text-neutral-800 pt-16 pb-12 overflow-hidden border-t-4 border-tsumuguPink">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-tsumuguPink/20">
@@ -438,6 +465,7 @@
               <p><i class="fa-brands fa-instagram text-tsumuguPink mr-2"></i>@tsumupro</p>
             </div>
             <div class="flex space-x-3 pt-2">
+              <!-- hrefにInstagramとXのリンクを設定 -->
               <a href="https://www.instagram.com/tsumupro/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguPink shadow-sm hover:bg-tsumuguPink hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
               <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguBlue shadow-sm hover:bg-tsumuguBlue hover:text-white transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
             </div>
@@ -453,6 +481,7 @@
       </div>
     </footer>
 
+    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
       const menuBtn = document.getElementById("menuBtn");
       const menuClose = document.getElementById("menuClose");
