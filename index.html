@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSUMUGU ART PROJECT (ツムプロ)</title>
 
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Zen Maru Gothic -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,17 +17,14 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- 外部CSSファイルの読み込み -->
     <link rel="stylesheet" href="style.css" />
 
     <script>
@@ -52,7 +50,6 @@
   <body
     class="text-neutral-800 antialiased selection:bg-tsumuguPink selection:text-white"
   >
-    <!-- ==================== HEADER ==================== -->
     <header
       class="fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-md px-4 py-3 flex justify-between items-center border-b border-white/20"
     >
@@ -88,7 +85,6 @@
       </button>
     </header>
 
-    <!-- スライドナビゲーション -->
     <div
       id="slideNav"
       class="fixed inset-0 bg-white/95 backdrop-blur-lg z-50 flex flex-col justify-center items-center space-y-8 text-2xl font-bold transform translate-x-full transition-transform duration-300 ease-in-out"
@@ -99,302 +95,144 @@
       >
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a
-        href="#hero"
-        class="text-tsumuguBlue hover:text-tsumuguPink transition-colors"
-        >ホーム</a
-      >
-      <a
-        href="#about"
-        class="text-tsumuguBlue hover:text-tsumuguPink transition-colors"
-        >ツムプロについて</a
-      >
-      <a
-        href="#stage"
-        class="text-tsumuguBlue hover:text-tsumuguPink transition-colors"
-        >STAGE 舞台</a
-      >
-      <a
-        href="#news"
-        class="text-tsumuguBlue hover:text-tsumuguPink transition-colors"
-        >お知らせ</a
-      >
-      <a
-        href="#contact"
-        class="text-tsumuguBlue hover:text-tsumuguPink transition-colors"
-        >お問い合わせ</a
-      >
+      <a href="#hero" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">ホーム</a>
+      <a href="#about" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">ツムプロについて</a>
+      <a href="#stage" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">STAGE 舞台</a>
+      <a href="#news" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">お知らせ</a>
+      <a href="#contact" class="text-tsumuguBlue hover:text-tsumuguPink transition-colors">お問い合わせ</a>
     </div>
 
-    <!-- ==================== HERO SECTION (ファーストビュー) ==================== -->
     <section
       id="hero"
       class="hero-container bg-gradient-to-b from-[#A5D1FE] to-[#D5E9FF]"
     >
-      <div
-        class="absolute top-28 left-6 w-4 h-4 bg-tsumuguPink rounded-full opacity-90 z-20 floating-bubble-1"
-      ></div>
-      <div
-        class="absolute top-14 left-1/2 w-6 h-6 bg-tsumuguPink rounded-full opacity-60 z-20 floating-bubble-2"
-      ></div>
-      <div
-        class="absolute bottom-[35%] left-8 w-5 h-5 bg-tsumuguPink rounded-full opacity-70 z-20 floating-bubble-3"
-      ></div>
-      <div
-        class="absolute bottom-[26%] right-8 w-8 h-8 bg-tsumuguPink rounded-full opacity-80 z-20 floating-bubble-1"
-      ></div>
-      <div
-        class="absolute bottom-[16%] right-12 w-4 h-4 bg-tsumuguPink rounded-full opacity-90 z-20 floating-bubble-2"
-      ></div>
+      <div class="absolute top-28 left-6 w-4 h-4 bg-tsumuguPink rounded-full opacity-90 z-20 floating-bubble-1"></div>
+      <div class="absolute top-14 left-1/2 w-6 h-6 bg-tsumuguPink rounded-full opacity-60 z-20 floating-bubble-2"></div>
+      <div class="absolute bottom-[35%] left-8 w-5 h-5 bg-tsumuguPink rounded-full opacity-70 z-20 floating-bubble-3"></div>
+      <div class="absolute bottom-[26%] right-8 w-8 h-8 bg-tsumuguPink rounded-full opacity-80 z-20 floating-bubble-1"></div>
+      <div class="absolute bottom-[16%] right-12 w-4 h-4 bg-tsumuguPink rounded-full opacity-90 z-20 floating-bubble-2"></div>
 
-      <!-- 画面幅いっぱいの写真スライダーと波線マスク -->
-      <div
-        class="relative w-full flex-1 flex flex-col justify-center items-center pt-16 z-10"
-      >
+      <div class="relative w-full flex-1 flex flex-col justify-center items-center pt-16 z-10">
         <div class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
-          <div
-            class="absolute top-0 left-0 w-full z-20 pointer-events-none -translate-y-1"
-          >
+          <div class="absolute top-0 left-0 w-full z-20 pointer-events-none -translate-y-1">
             <svg viewBox="0 0 1440 160" fill="#A5D1FE" class="w-full h-auto">
-              <path
-                d="M0,0 L1440,0 L1440,60 C1100,160 800,20 400,100 C200,140 100,80 0,100 Z"
-              />
+              <path d="M0,0 L1440,0 L1440,60 C1100,160 800,20 400,100 C200,140 100,80 0,100 Z" />
             </svg>
           </div>
 
           <div class="relative w-full h-full">
-            <div
-              class="carousel-slide active w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700"
-            >
-              <img
-                src="realimages/1.jpg"
-                alt="ツムプロメンバー 1"
-                class="w-full h-full object-cover object-center brightness-105 contrast-105"
-                onerror="this.src='https://placehold.co/600x600/111/FFF?text=TSUMUGU+CAST+1'"
-              />
+            <div class="carousel-slide active w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700">
+              <img src="realimages/1.jpg" alt="ツムプロメンバー 1" class="w-full h-full object-cover object-center brightness-105 contrast-105" onerror="this.src='https://placehold.co/600x600/111/FFF?text=TSUMUGU+CAST+1'" />
             </div>
-            <div
-              class="carousel-slide w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700"
-            >
-              <img
-                src="realimages/2.jpg"
-                alt="ツムプロ稽古 2"
-                class="w-full h-full object-cover object-center brightness-105 contrast-105"
-                onerror="this.src='https://placehold.co/600x600/222/FFF?text=TSUMUGU+CAST+2'"
-              />
+            <div class="carousel-slide w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700">
+              <img src="realimages/2.jpg" alt="ツムプロ稽古 2" class="w-full h-full object-cover object-center brightness-105 contrast-105" onerror="this.src='https://placehold.co/600x600/222/FFF?text=TSUMUGU+CAST+2'" />
             </div>
-            <div
-              class="carousel-slide w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700"
-            >
-              <img
-                src="realimages/3.jpg"
-                alt="ツムプロ美術 3"
-                class="w-full h-full object-cover object-center brightness-105 contrast-105"
-                onerror="this.src='https://placehold.co/600x600/333/FFF?text=TSUMUGU+CAST+3'"
-              />
+            <div class="carousel-slide w-full h-full transform scale-105 hover:scale-100 transition-transform duration-700">
+              <img src="realimages/3.jpg" alt="ツムプロ美術 3" class="w-full h-full object-cover object-center brightness-105 contrast-105" onerror="this.src='https://placehold.co/600x600/333/FFF?text=TSUMUGU+CAST+3'" />
             </div>
           </div>
 
-          <div
-            class="absolute bottom-0 left-0 w-full z-20 pointer-events-none translate-y-1"
-          >
+          <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none translate-y-1">
             <svg viewBox="0 0 1440 160" fill="#ffffff" class="w-full h-auto">
-              <path
-                d="M0,160 L1440,160 L1440,60 C1200,140 900,40 600,120 C300,200 100,60 0,80 Z"
-              />
+              <path d="M0,160 L1440,160 L1440,60 C1200,140 900,40 600,120 C300,200 100,60 0,80 Z" />
             </svg>
           </div>
 
-          <!-- 縦書き日本語コピー -->
-          <div
-            class="absolute right-4 md:right-10 top-0 bottom-0 z-30 flex items-center"
-          >
-            <div
-              class="emotive-vertical-text text-4xl md:text-5xl flex flex-col items-center"
-            >
+          <div class="absolute right-4 md:right-10 top-0 bottom-0 z-30 flex items-center">
+            <div class="emotive-vertical-text text-4xl md:text-5xl flex flex-col items-center">
               <span class="mb-4">紡ごうよ、</span>
-              <span
-                >キミの感性<span
-                  class="inline-block mt-2 text-4xl transform translate-x-1 translate-y-1"
-                  >。</span
-                ></span
-              >
+              <span>キミの感性<span class="inline-block mt-2 text-4xl transform translate-x-1 translate-y-1">。</span></span>
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        class="relative w-full h-[240px] md:h-[320px] overflow-hidden flex flex-col justify-between"
-      >
+      <div class="relative w-full h-[240px] md:h-[320px] overflow-hidden flex flex-col justify-between">
         <img
           src="realimages/4.jpg"
           alt="テラスからの富士山"
           class="absolute inset-0 w-full h-full object-cover object-bottom"
           onerror="this.src='https://placehold.co/1200x400/4A90E2/FFF?text=FUJI+VIEW'"
         />
-        <div
-          class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white via-white/40 to-transparent z-10"
-        ></div>
-        <div class="relative z-20 px-6 pt-4">
-          <h1
-            class="text-3xl md:text-5xl font-black text-tsumuguBlue tracking-wider leading-none uppercase select-none filter drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"
-          >
-            TSUMUGU<br />
-            <span class="text-2xl md:text-4xl tracking-widest"
-              >ART PROJECT</span
-            >
-          </h1>
+        <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white via-white/40 to-transparent z-10"></div>
+        
+        <div class="relative z-20 px-6 pt-4 flex justify-start">
+          <img
+            src="logo.png"
+            alt="TSUMUGU ART PROJECT"
+            class="h-20 md:h-28 lg:h-36 object-contain filter drop-shadow-[0_4px_6px_rgba(255,255,255,0.8)]"
+            onerror="this.src='https://placehold.co/400x120/4A90E2/FFF?text=TSUMUGU+ART+PROJECT'"
+          />
         </div>
-        <div
-          class="h-6 bg-white/20 backdrop-blur-[2px] border-t border-white/40 w-full z-10 flex justify-center items-center"
-        >
+
+        <div class="h-6 bg-white/20 backdrop-blur-[2px] border-t border-white/40 w-full z-10 flex justify-center items-center">
           <div class="w-12 h-1 bg-white/80 rounded-full animate-pulse"></div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== INTRO & ABOUT SECTION ==================== -->
     <section id="about" class="bg-white py-20 px-6 relative overflow-hidden">
-      <div
-        class="max-w-xl mx-auto text-center space-y-6 text-neutral-800 relative z-10 mb-28"
-      >
-        <p
-          class="text-lg md:text-xl font-bold tracking-wider leading-relaxed text-neutral-700"
-        >
+      <div class="max-w-xl mx-auto text-center space-y-6 text-neutral-800 relative z-10 mb-28">
+        <p class="text-lg md:text-xl font-bold tracking-wider leading-relaxed text-neutral-700">
           まだ誰も見ぬ舞台へ一歩を踏み出す<br />
           ときの、あの高揚。
         </p>
-        <p
-          class="text-lg md:text-xl font-bold tracking-wider leading-relaxed text-neutral-700"
-        >
+        <p class="text-lg md:text-xl font-bold tracking-wider leading-relaxed text-neutral-700">
           仲間の放つエネルギーに共鳴し合う瞬間。
         </p>
-        <p
-          class="text-xl md:text-2xl text-tsumuguPink font-black tracking-widest leading-relaxed py-2"
-        >
+        <p class="text-xl md:text-2xl text-tsumuguPink font-black tracking-widest leading-relaxed py-2">
           全部全部ひっくるめて、私たちは表現が好きだから。
         </p>
-        <div
-          class="w-12 h-[3px] bg-tsumuguPink/30 mx-auto my-6 rounded-full"
-        ></div>
-        <p
-          class="text-base md:text-lg text-tsumuguBlue font-bold tracking-widest"
-        >
+        <div class="w-12 h-[3px] bg-tsumuguPink/30 mx-auto my-6 rounded-full"></div>
+        <p class="text-base md:text-lg text-tsumuguBlue font-bold tracking-widest">
           一人ひとりの若者のピュアな感性を、静岡から。
         </p>
       </div>
 
       <div class="max-w-6xl mx-auto relative z-10">
-        <div
-          class="absolute inset-0 pointer-events-none opacity-30 z-0 flex items-center justify-center"
-        >
-          <svg
-            class="w-full h-[400px]"
-            viewBox="0 0 1440 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-50,200 C200,100 350,300 500,200 C650,100 800,300 950,200 C1100,100 1250,300 1500,200"
-              stroke="#2563EB"
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-dasharray="10 10"
-            />
+        <div class="absolute inset-0 pointer-events-none opacity-30 z-0 flex items-center justify-center">
+          <svg class="w-full h-[400px]" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-50,200 C200,100 350,300 500,200 C650,100 800,300 950,200 C1100,100 1250,300 1500,200" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 10" />
           </svg>
         </div>
 
         <div class="relative z-10">
           <div class="text-center mb-16">
-            <span
-              class="text-xs font-bold tracking-widest text-tsumuguPink uppercase block mb-1"
-              >ABOUT US</span
-            >
-            <h2
-              class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3"
-            >
-              ツムプロについて
-            </h2>
+            <span class="text-xs font-bold tracking-widest text-tsumuguPink uppercase block mb-1">ABOUT US</span>
+            <h2 class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3">ツムプロについて</h2>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-6 flex flex-col items-center space-y-8">
               <div class="flex space-x-6 relative">
-                <div
-                  class="bg-white p-3 rounded shadow-lg border border-neutral-100 transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-36 md:w-44 shrink-0"
-                >
-                  <img
-                    src="realimages/5.jpg"
-                    alt="制作"
-                    class="w-full h-28 object-cover rounded"
-                    onerror="this.src='https://placehold.co/300x200/2563EB/FFF?text=Art'"
-                  />
-                  <p
-                    class="text-[9px] text-center font-bold text-neutral-500 mt-2"
-                  >
-                    みんなでつくる一幕 🎨
-                  </p>
+                <div class="bg-white p-3 rounded shadow-lg border border-neutral-100 transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 w-36 md:w-44 shrink-0">
+                  <img src="realimages/5.jpg" alt="制作" class="w-full h-28 object-cover rounded" onerror="this.src='https://placehold.co/300x200/2563EB/FFF?text=Art'" />
+                  <p class="text-[9px] text-center font-bold text-neutral-500 mt-2">みんなでつくる一幕 🎨</p>
                 </div>
-                <div
-                  class="bg-white p-3 rounded shadow-lg border border-neutral-100 transform rotate-6 translate-y-4 hover:rotate-0 hover:scale-105 transition-all duration-300 w-36 md:w-44 shrink-0"
-                >
-                  <img
-                    src="realimages/6.jpg"
-                    alt="稽古"
-                    class="w-full h-28 object-cover rounded"
-                    onerror="this.src='https://placehold.co/300x200/FF5A9E/FFF?text=Stage'"
-                  />
-                  <p
-                    class="text-[9px] text-center font-bold text-neutral-500 mt-2"
-                  >
-                    稽古中の真剣な一瞬 🎭
-                  </p>
+                <div class="bg-white p-3 rounded shadow-lg border border-neutral-100 transform rotate-6 translate-y-4 hover:rotate-0 hover:scale-105 transition-all duration-300 w-36 md:w-44 shrink-0">
+                  <img src="realimages/6.jpg" alt="稽古" class="w-full h-28 object-cover rounded" onerror="this.src='https://placehold.co/300x200/FF5A9E/FFF?text=Stage'" />
+                  <p class="text-[9px] text-center font-bold text-neutral-500 mt-2">稽古中の真剣な一瞬 🎭</p>
                 </div>
               </div>
 
-              <div
-                class="w-full max-w-sm bg-white p-4 rounded-3xl shadow-xl border-2 border-dashed border-tsumuguBlue/40 transform -rotate-1 hover:rotate-0 transition-transform duration-300"
-              >
-                <img
-                  src="realimages/7.jpg"
-                  alt="集合"
-                  class="w-full h-40 object-cover rounded-2xl"
-                  onerror="this.src='https://placehold.co/500x300/F59E0B/FFF?text=Team'"
-                />
-                <p
-                  class="text-xs text-center font-bold text-neutral-600 mt-2.5"
-                >
-                  笑顔に満ちたクリエイター集団をパチリ！📷
-                </p>
+              <div class="w-full max-w-sm bg-white p-4 rounded-3xl shadow-xl border-2 border-dashed border-tsumuguBlue/40 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <img src="realimages/7.jpg" alt="集合" class="w-full h-40 object-cover rounded-2xl" onerror="this.src='https://placehold.co/500x300/F59E0B/FFF?text=Team'" />
+                <p class="text-xs text-center font-bold text-neutral-600 mt-2.5">笑顔に満ちたクリエイター集団をパチリ！📷</p>
               </div>
             </div>
 
             <div class="lg:col-span-6">
-              <div
-                class="bg-white/80 p-8 rounded-3xl border border-sky-100 shadow-md space-y-6"
-              >
-                <h3
-                  class="text-2xl font-black text-neutral-800 flex items-center"
-                >
+              <div class="bg-white/80 p-8 rounded-3xl border border-sky-100 shadow-md space-y-6">
+                <h3 class="text-2xl font-black text-neutral-800 flex items-center">
                   <span class="w-3 h-7 bg-tsumuguPink rounded-full mr-2"></span>
                   ゼロから、ともに。
                 </h3>
-                <div
-                  class="text-neutral-700 leading-relaxed space-y-4 font-bold text-sm md:text-base"
-                >
-                  <p>
-                    「TSUMUGU ART
-                    PROJECT」（ツムプロ）は、演劇やダンス、歌など、若者一人ひとりが感性を発揮させてつくりあげる本格的な舞台作品を企画・運営・公演する、舞台芸術プロジェクトです。 
-                  </p>
-                  <p>
-                    単独公演だけに留まらず、地域の祭りや外部のライブイベントなどにも精力的に出演中。 表現の枠を超えて、仲間とともに社会や地域へと飛び出しています。
-                  </p>
+                <div class="text-neutral-700 leading-relaxed space-y-4 font-bold text-sm md:text-base">
+                  <p>「TSUMUGU ART PROJECT」（ツムプロ）は、演劇やダンス、歌など、若者一人ひとりが感性を発揮させてつくりあげる本格的な舞台作品を企画・運営・公演する、舞台芸術プロジェクトです。</p>
+                  <p>単独公演だけに留まらず、地域の祭りや外部のライブイベントなどにも精力的に出演中。 表現の枠を超えて、仲間とともに社会や地域へと飛び出しています。</p>
                 </div>
                 <div class="flex justify-end pt-4">
-                  <span
-                    class="border-2 border-dashed border-tsumuguPink text-tsumuguPink font-black text-xs px-4 py-2 rounded-full transform rotate-[4deg]"
-                  >
+                  <span class="border-2 border-dashed border-tsumuguPink text-tsumuguPink font-black text-xs px-4 py-2 rounded-full transform rotate-[4deg]">
                     ✨ 見学・スタッフ随時募集中！
                   </span>
                 </div>
@@ -405,82 +243,35 @@
       </div>
     </section>
 
-    <!-- ==================== STAGE SECTION (1枚の大きな掲示板) ==================== -->
     <section id="stage" class="relative overflow-hidden bulletin-board-bg">
-      <div
-        class="absolute top-8 left-0 w-full text-center z-20 pointer-events-none"
-      >
-        <div
-          class="bg-white/90 backdrop-blur-md px-8 py-3 rounded-full inline-block shadow-sm border border-[#e2d5c3]"
-        >
-          <span
-            class="text-xs font-bold tracking-widest text-tsumuguBlue uppercase block"
-            >STAGE</span
-          >
-          <h2 class="text-2xl md:text-3xl font-black text-tsumuguBlue mt-0.5">
-            舞台
-          </h2>
+      <div class="absolute top-8 left-0 w-full text-center z-20 pointer-events-none">
+        <div class="bg-white/90 backdrop-blur-md px-8 py-3 rounded-full inline-block shadow-sm border border-[#e2d5c3]">
+          <span class="text-xs font-bold tracking-widest text-tsumuguBlue uppercase block">STAGE</span>
+          <h2 class="text-2xl md:text-3xl font-black text-tsumuguBlue mt-0.5">舞台</h2>
         </div>
-        <p
-          class="text-[10px] text-neutral-600 font-bold mt-2 bg-white/70 inline-block px-3 py-1 rounded-full backdrop-blur-sm"
-        >
+        <p class="text-[10px] text-neutral-600 font-bold mt-2 bg-white/70 inline-block px-3 py-1 rounded-full backdrop-blur-sm">
           ▼ スクロールして掲示板のポスターをチェック！
         </p>
       </div>
 
       <div class="horizontal-outer h-screen flex items-center">
-        <div
-          class="horizontal-inner flex items-center px-[10vw] md:px-[20vw] gap-12 md:gap-32 pt-16"
-        >
-          <div
-            class="w-[80vw] max-w-sm flex-shrink-0 transform -rotate-2 hover:rotate-0 transition-transform duration-300"
-          >
-            <div
-              class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative"
-            >
-              <div
-                class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-2 border-red-700 shadow-md z-10"
-              >
+        <div class="horizontal-inner flex items-center px-[10vw] md:px-[20vw] gap-12 md:gap-32 pt-16">
+          
+          <div class="w-[80vw] max-w-sm flex-shrink-0 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+            <div class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative">
+              <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-2 border-red-700 shadow-md z-10">
                 <div class="absolute inset-1 bg-red-400 rounded-full"></div>
               </div>
-              <div
-                class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative"
-              >
-                <div
-                  class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-sky-300 text-neutral-800 px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest"
-                >
-                  第一回公演
-                </div>
+              <div class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-sky-300 text-neutral-800 px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest">第一回公演</div>
                 <div class="bg-[#183529] rounded-md p-4 text-white mt-2">
-                  <h4
-                    class="text-center font-bold text-xs tracking-widest mb-3 bg-white/10 py-1 rounded"
-                  >
-                    アデニウム / Adenium
-                  </h4>
-                  <img
-                    src="realimages/8.jpg"
-                    alt="アデニウム"
-                    class="w-full h-40 object-cover rounded border border-white/50 mb-3"
-                    onerror="this.src='https://placehold.co/400x300/183529/FFF?text=Adenium'"
-                  />
-                  <p
-                    class="text-[10px] leading-relaxed text-emerald-200 font-bold mb-3"
-                  >
-                    COMPANY NINEオリジナル作品『アデニウム』のTSUMUGU ART PROJECTオリジナル版！オープニングアクト『十人十色』・メインアクト『アデニウム』を2025年6月7日（土）8日（日）　全4回
-サールナートホール大ホールにて実施。
-                  </p>
-                  <div
-                    class="flex items-center space-x-2 bg-black/30 px-3 py-1 rounded-full"
-                  >
-                    <span class="text-[8px] font-bold text-emerald-300"
-                      >STAGE 01</span
-                    >
-                    <div
-                      class="flex-1 bg-emerald-950 h-2 rounded-full relative overflow-hidden"
-                    >
-                      <div
-                        class="absolute left-1 top-0.5 w-1.5 h-1 bg-white rounded-full"
-                      ></div>
+                  <h4 class="text-center font-bold text-xs tracking-widest mb-3 bg-white/10 py-1 rounded">アデニウム / Adenium</h4>
+                  <img src="realimages/8.jpg" alt="アデニウム" class="w-full h-40 object-cover rounded border border-white/50 mb-3" onerror="this.src='https://placehold.co/400x300/183529/FFF?text=Adenium'" />
+                  <p class="text-[10px] leading-relaxed text-emerald-200 font-bold mb-3">COMPANY NINEオリジナル作品『アデニウム』のTSUMUGU ART PROJECTオリジナル版！オープニングアクト『十人十色』・メインアクト『アデニウム』を2025年6月7日（土）8日（日） 全4回 サールナートホール大ホールにて実施。</p>
+                  <div class="flex items-center space-x-2 bg-black/30 px-3 py-1 rounded-full">
+                    <span class="text-[8px] font-bold text-emerald-300">STAGE 01</span>
+                    <div class="flex-1 bg-emerald-950 h-2 rounded-full relative overflow-hidden">
+                      <div class="absolute left-1 top-0.5 w-1.5 h-1 bg-white rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -488,50 +279,19 @@
             </div>
           </div>
 
-          <div
-            class="w-[80vw] max-w-sm flex-shrink-0 transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-12 md:mt-24"
-          >
-            <div
-              class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative"
-            >
-              <div
-                class="absolute -top-4 -left-4 w-16 h-6 bg-yellow-200/80 backdrop-blur-sm transform -rotate-12 shadow-sm z-10"
-              ></div>
-              <div
-                class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative"
-              >
-                <div
-                  class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-tsumuguPink text-white px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest"
-                >
-                  第二回公演
-                </div>
+          <div class="w-[80vw] max-w-sm flex-shrink-0 transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-12 md:mt-24">
+            <div class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative">
+              <div class="absolute -top-4 -left-4 w-16 h-6 bg-yellow-200/80 backdrop-blur-sm transform -rotate-12 shadow-sm z-10"></div>
+              <div class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-tsumuguPink text-white px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest">第二回公演</div>
                 <div class="bg-[#112435] rounded-md p-4 text-white mt-2">
-                  <h4
-                    class="text-center font-bold text-xs tracking-widest mb-3 bg-white/10 py-1 rounded"
-                  >
-                    星降る日、花さき日和。
-                  </h4>
-                  <img
-                    src="realimages/9.jpg"
-                    alt="星落ちる夜に"
-                    class="w-full h-40 object-cover rounded border border-white/50 mb-3"
-                    onerror="this.src='https://placehold.co/400x300/112435/FFF?text=StarryNight'"
-                  />
-                  <p
-                    class="text-[10px] leading-relaxed text-sky-200 font-bold mb-3"
-                  >
-                    "魔法が使えない”魔法使いステラ、喋るのが怖くなった葵香。交わることのない2人が出会い、運命が動き出す。2026年3月21日（土）22日（日）にて、アイセル21葵生涯学習センターで上演。
-                  </p>
-                  <div
-                    class="flex items-center space-x-2 bg-black/30 px-3 py-1 rounded-full"
-                  >
-                    <span class="text-[8px] font-bold text-sky-300"
-                      >STAGE 02</span
-                    >
+                  <h4 class="text-center font-bold text-xs tracking-widest mb-3 bg-white/10 py-1 rounded">星降る日、花さき日和。</h4>
+                  <img src="realimages/9.jpg" alt="星落ちる夜に" class="w-full h-40 object-cover rounded border border-white/50 mb-3" onerror="this.src='https://placehold.co/400x300/112435/FFF?text=StarryNight'" />
+                  <p class="text-[10px] leading-relaxed text-sky-200 font-bold mb-3">"魔法が使えない”魔法使いステラ、喋るのが怖くなった葵香。交わることのない2人が出会い、運命が動き出す。2026年3月21日（土）22日（日）にて、アイセル21葵生涯学習センターで上演。</p>
+                  <div class="flex items-center space-x-2 bg-black/30 px-3 py-1 rounded-full">
+                    <span class="text-[8px] font-bold text-sky-300">STAGE 02</span>
                     <div class="flex-1 bg-sky-950 h-2 rounded-full relative">
-                      <div
-                        class="absolute left-1/2 transform -translate-x-1/2 top-0.5 w-1.5 h-1 bg-white rounded-full"
-                      ></div>
+                      <div class="absolute left-1/2 transform -translate-x-1/2 top-0.5 w-1.5 h-1 bg-white rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -539,126 +299,62 @@
             </div>
           </div>
 
-          <div
-            class="w-[80vw] max-w-sm flex-shrink-0 transform -rotate-1 hover:rotate-0 transition-transform duration-300 mb-12 md:mb-16"
-          >
-            <div
-              class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative"
-            >
-              <div
-                class="absolute -top-3 right-4 transform w-6 h-6 bg-blue-500 rounded-full border-2 border-blue-700 shadow-md z-10"
-              >
+          <div class="w-[80vw] max-w-sm flex-shrink-0 transform -rotate-1 hover:rotate-0 transition-transform duration-300 mb-12 md:mb-16">
+            <div class="bg-white p-3 rounded-xl border border-neutral-200 retro-box-shadow relative">
+              <div class="absolute -top-3 right-4 transform w-6 h-6 bg-blue-500 rounded-full border-2 border-blue-700 shadow-md z-10">
                 <div class="absolute inset-1 bg-blue-400 rounded-full"></div>
               </div>
-              <div
-                class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative"
-              >
-                <div
-                  class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-neutral-800 px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest"
-                >
-                  第三回公演
-                </div>
-                <div
-                  class="bg-[#1e2f27] rounded-md p-4 text-white mt-2 relative min-h-[200px] flex flex-col justify-center"
-                >
-                  <h4
-                    class="text-center font-bold text-xs tracking-widest mb-4 bg-white/10 py-1 rounded"
-                  >
-                    〜現在準備中〜
-                  </h4>
-                  <p
-                    class="text-[10px] leading-relaxed text-emerald-100 font-bold mb-8"
-                  >
-                    ツムプロの第3回公演については、続報をお待ちください！
-                  </p>
-                  <div
-                    class="absolute bottom-3 left-4 right-4 flex items-center space-x-2 bg-black/30 px-3 py-1.5 rounded-full"
-                  >
-                    <span class="text-[8px] font-bold text-yellow-300"
-                      >STAGE 03</span
-                    >
-                    <div
-                      class="flex-1 bg-emerald-950 h-2 rounded-full relative"
-                    >
-                      <div
-                        class="absolute right-1 top-0.5 w-1.5 h-1 bg-white rounded-full"
-                      ></div>
+              <div class="bg-tsumuguGreen p-4 rounded-lg border-4 border-[#7d4f2a] shadow-inner relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-neutral-800 px-4 py-1 text-[10px] font-black rounded-full shadow border-2 border-white tracking-widest">第三回公演</div>
+                <div class="bg-[#1e2f27] rounded-md p-4 text-white mt-2 relative min-h-[200px] flex flex-col justify-center">
+                  <h4 class="text-center font-bold text-xs tracking-widest mb-4 bg-white/10 py-1 rounded">〜現在準備中〜</h4>
+                  <p class="text-[10px] leading-relaxed text-emerald-100 font-bold mb-8">ツムプロの第3回公演については、続報をお待ちください！</p>
+                  <div class="absolute bottom-3 left-4 right-4 flex items-center space-x-2 bg-black/30 px-3 py-1.5 rounded-full">
+                    <span class="text-[8px] font-bold text-yellow-300">STAGE 03</span>
+                    <div class="flex-1 bg-emerald-950 h-2 rounded-full relative">
+                      <div class="absolute right-1 top-0.5 w-1.5 h-1 bg-white rounded-full"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
 
-    <!-- ==================== NEWS SECTION ==================== -->
-    <section
-      id="news"
-      class="py-24 bg-gradient-to-b from-sky-50 via-white to-pink-50"
-    >
+    <section id="news" class="py-24 bg-gradient-to-b from-sky-50 via-white to-pink-50">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
-          <span
-            class="text-xs font-bold tracking-widest text-tsumuguBlue uppercase block mb-1"
-            >WHAT'S NEW</span
-          >
-          <h2
-            class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3"
-          >
-            お知らせ
-          </h2>
+          <span class="text-xs font-bold tracking-widest text-tsumuguBlue uppercase block mb-1">WHAT'S NEW</span>
+          <h2 class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3">お知らせ</h2>
         </div>
 
         <div class="space-y-6">
-          <div
-            class="bg-white p-5 rounded-2xl retro-pink-shadow hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-          >
+          <div class="bg-white p-5 rounded-2xl retro-pink-shadow hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
-              <span
-                class="bg-tsumuguPink text-white px-3 py-1 rounded-full text-[10px] font-black shrink-0"
-                >本公演</span
-              >
+              <span class="bg-tsumuguPink text-white px-3 py-1 rounded-full text-[10px] font-black shrink-0">本公演</span>
               <div>
-                <span class="text-[10px] text-neutral-400 block font-bold"
-                  >2026.04.22</span
-                >
-                <h3 class="font-bold text-neutral-800 text-sm md:text-base">
-                  静岡まつり📍シン・玉川座ステージにて、ツムプロがオリジナルナンバー＆静岡まつり伝統ダンスを披露!
-                </h3>
+                <span class="text-[10px] text-neutral-400 block font-bold">2026.04.22</span>
+                <h3 class="font-bold text-neutral-800 text-sm md:text-base">静岡まつり📍シン・玉川座ステージにて、ツムプロがオリジナルナンバー＆静岡まつり伝統ダンスを披露!</h3>
               </div>
             </div>
-            <a
-              href="#"
-              class="text-tsumuguPink hover:underline text-xs font-black flex items-center space-x-1 shrink-0 self-end md:self-auto"
-            >
+            <a href="#" class="text-tsumuguPink hover:underline text-xs font-black flex items-center space-x-1 shrink-0 self-end md:self-auto">
               <span>詳細を見る</span>
               <i class="fa-solid fa-chevron-right"></i>
             </a>
           </div>
 
-          <div
-            class="bg-white p-5 rounded-2xl retro-pink-shadow hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-          >
+          <div class="bg-white p-5 rounded-2xl retro-pink-shadow hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
-              <span
-                class="bg-tsumuguBlue text-white px-3 py-1 rounded-full text-[10px] font-black shrink-0"
-                >レポート</span
-              >
+              <span class="bg-tsumuguBlue text-white px-3 py-1 rounded-full text-[10px] font-black shrink-0">レポート</span>
               <div>
-                <span class="text-[10px] text-neutral-400 block font-bold"
-                  >2026.04.11</span
-                >
-                <h3 class="font-bold text-neutral-800 text-sm md:text-base">
-                  Rodrigo Teaserさんライブ "MICHAEL LIVES FOREVER"にツムプロのアーティストたちが特別出演いたしました。
-                </h3>
+                <span class="text-[10px] text-neutral-400 block font-bold">2026.04.11</span>
+                <h3 class="font-bold text-neutral-800 text-sm md:text-base">Rodrigo Teaserさんライブ "MICHAEL LIVES FOREVER"にツムプロのアーティストたちが特別出演いたしました。</h3>
               </div>
             </div>
-            <a
-              href="#"
-              class="text-tsumuguPink hover:underline text-xs font-black flex items-center space-x-1 shrink-0 self-end md:self-auto"
-            >
+            <a href="#" class="text-tsumuguPink hover:underline text-xs font-black flex items-center space-x-1 shrink-0 self-end md:self-auto">
               <span>詳細を見る</span>
               <i class="fa-solid fa-chevron-right"></i>
             </a>
@@ -667,124 +363,55 @@
       </div>
     </section>
 
-    <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact" class="py-24 bg-white relative overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-          <span
-            class="text-xs font-bold tracking-widest text-tsumuguPink uppercase block mb-1"
-            >CONTACT</span
-          >
-          <h2
-            class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3"
-          >
-            お問い合わせ
-          </h2>
+          <span class="text-xs font-bold tracking-widest text-tsumuguPink uppercase block mb-1">CONTACT</span>
+          <h2 class="text-3xl md:text-4xl font-black text-tsumuguBlue hand-drawn-line inline-block pb-3">お問い合わせ</h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5 flex flex-col items-center">
-            <div
-              class="w-60 h-60 md:w-64 md:h-64 bg-tsumuguBlue rounded-full flex flex-col justify-center items-center text-white p-6 text-center border-4 border-white shadow-2xl transform hover:rotate-3 transition-transform duration-300"
-            >
-              <p
-                class="text-xs uppercase font-black text-tsumuguYellow mb-2 tracking-widest animate-bounce"
-              >
-                JOIN US!
-              </p>
-              <p class="font-black text-sm md:text-base leading-relaxed">
-                経験不問！<br />舞台を一緒につくる<br />仲間を募集中です。
-              </p>
+            <div class="w-60 h-60 md:w-64 md:h-64 bg-tsumuguBlue rounded-full flex flex-col justify-center items-center text-white p-6 text-center border-4 border-white shadow-2xl transform hover:rotate-3 transition-transform duration-300">
+              <p class="text-xs uppercase font-black text-tsumuguYellow mb-2 tracking-widest animate-bounce">JOIN US!</p>
+              <p class="font-black text-sm md:text-base leading-relaxed">経験不問！<br />舞台を一緒につくる<br />仲間を募集中です。</p>
             </div>
 
-            <div
-              class="flex items-center space-x-4 bg-sky-50 p-4 rounded-3xl border border-sky-100 max-w-sm mt-8 relative"
-            >
-              <img
-                src="realimages/10.jpg"
-                alt="代表"
-                class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md shrink-0"
-                onerror="this.src='https://placehold.co/100x100/FF5A9E/FFF?text=Leader'"
-              />
+            <div class="flex items-center space-x-4 bg-sky-50 p-4 rounded-3xl border border-sky-100 max-w-sm mt-8 relative">
+              <img src="realimages/10.jpg" alt="代表" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md shrink-0" onerror="this.src='https://placehold.co/100x100/FF5A9E/FFF?text=Leader'" />
               <div>
-                <span
-                  class="text-[9px] bg-tsumuguPink text-white px-2 py-0.5 rounded-full font-black tracking-wider"
-                  >REPRESENTATIVE</span
-                >
-                <h4 class="font-black text-neutral-800 text-sm mt-1">
-                  加藤 咲穂 (Saho Kato)
-                </h4>
-                <p class="text-[11px] text-neutral-500 font-bold mt-1">
-                  表現してみたい！そんな直感を大歓迎しております。お待ちしています！
-                </p>
+                <span class="text-[9px] bg-tsumuguPink text-white px-2 py-0.5 rounded-full font-black tracking-wider">REPRESENTATIVE</span>
+                <h4 class="font-black text-neutral-800 text-sm mt-1">加藤 咲穂 (Saho Kato)</h4>
+                <p class="text-[11px] text-neutral-500 font-bold mt-1">表現してみたい！そんな直感を大歓迎しております。お待ちしています！</p>
               </div>
-              <div
-                class="absolute -right-8 top-1/2 -translate-y-1/2 text-tsumuguBlue font-black text-[10px] tracking-widest hidden md:block"
-                style="writing-mode: vertical-rl"
-              >
-                代表 加藤咲穂
-              </div>
+              <div class="absolute -right-8 top-1/2 -translate-y-1/2 text-tsumuguBlue font-black text-[10px] tracking-widest hidden md:block" style="writing-mode: vertical-rl">代表 加藤咲穂</div>
             </div>
           </div>
 
           <div class="lg:col-span-7 bg-white p-8 rounded-3xl retro-box-shadow">
-            <form
-              onsubmit="event.preventDefault(); alert('お問い合わせありがとうございました！(デモ送信)');"
-              class="space-y-4"
-            >
+            <form action="mailto:tsumupro.art@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
               <div>
-                <label class="block text-xs font-black text-neutral-500 mb-1"
-                  >お名前</label
-                >
-                <input
-                  type="text"
-                  required
-                  placeholder="つむぐ 太郎"
-                  class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm"
-                />
+                <label class="block text-xs font-black text-neutral-500 mb-1">お名前</label>
+                <input type="text" name="お名前" required placeholder="つむぐ 太郎" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm" />
               </div>
               <div>
-                <label class="block text-xs font-black text-neutral-500 mb-1"
-                  >メールアドレス</label
-                >
-                <input
-                  type="email"
-                  required
-                  placeholder="your-email@example.com"
-                  class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm"
-                />
+                <label class="block text-xs font-black text-neutral-500 mb-1">メールアドレス</label>
+                <input type="email" name="メールアドレス" required placeholder="your-email@example.com" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm" />
               </div>
               <div>
-                <label class="block text-xs font-black text-neutral-500 mb-1"
-                  >内容</label
-                >
-                <textarea
-                  rows="4"
-                  required
-                  placeholder="見学希望やコラボの提案など、何でもお気軽に！"
-                  class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm"
-                ></textarea>
+                <label class="block text-xs font-black text-neutral-500 mb-1">内容</label>
+                <textarea rows="4" name="お問い合わせ内容" required placeholder="見学希望やコラボの提案など、何でもお気軽に！" class="w-full p-3 rounded-xl border-2 border-neutral-300 focus:border-tsumuguBlue focus:outline-none font-bold text-sm"></textarea>
               </div>
-              <button
-                type="submit"
-                class="w-full bg-tsumuguPink hover:bg-tsumuguPinkDark text-white py-3 px-6 rounded-xl font-black shadow-md transition-colors tracking-widest text-sm"
-              >
-                メッセージを送信する
-              </button>
+              <button type="submit" class="w-full bg-tsumuguPink hover:bg-tsumuguPinkDark text-white py-3 px-6 rounded-xl font-black shadow-md transition-colors tracking-widest text-sm">メッセージを送信する</button>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer
-      class="bg-gradient-to-b from-white to-pink-100 text-neutral-800 pt-16 pb-12 overflow-hidden border-t-4 border-tsumuguPink"
-    >
+    <footer class="bg-gradient-to-b from-white to-pink-100 text-neutral-800 pt-16 pb-12 overflow-hidden border-t-4 border-tsumuguPink">
       <div class="max-w-6xl mx-auto px-6">
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-tsumuguPink/20"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-tsumuguPink/20">
           <div class="space-y-4">
           <img
             src="logo.png"
@@ -792,100 +419,40 @@
             class="h-12 object-contain"
             onerror="this.src='https://placehold.co/180x60/FF5A9E/FFF?text=ツムプロ'"
           /> 
-            <p class="text-xs text-neutral-600 font-bold leading-relaxed">
-              「TSUMUGU ART
-              PROJECT」は、個々の「感性」を紡ぎ、一つの温かいクリエイティブへと昇華するプロジェクトです。
-            </p>
+            <p class="text-xs text-neutral-600 font-bold leading-relaxed">「TSUMUGU ART PROJECT」は、個々の「感性」を紡ぎ、一つの温かいクリエイティブへと昇華するプロジェクトです。</p>
           </div>
           <div class="space-y-4">
-            <h4
-              class="text-sm font-black text-tsumuguBlue tracking-widest border-b-2 border-tsumuguBlue/20 pb-1 inline-block"
-            >
-              INDEX
-            </h4>
+            <h4 class="text-sm font-black text-tsumuguBlue tracking-widest border-b-2 border-tsumuguBlue/20 pb-1 inline-block">INDEX</h4>
             <ul class="text-xs font-bold text-neutral-600 space-y-2.5">
-              <li>
-                <a href="#hero" class="hover:text-tsumuguPink transition-colors"
-                  >ホーム / キャッチコピー</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="hover:text-tsumuguPink transition-colors"
-                  >ツムプロについて</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#stage"
-                  class="hover:text-tsumuguPink transition-colors"
-                  >舞台</a
-                >
-              </li>
-              <li>
-                <a href="#news" class="hover:text-tsumuguPink transition-colors"
-                  >お知らせ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="hover:text-tsumuguPink transition-colors"
-                  >お問い合わせ</a
-                >
-              </li>
+              <li><a href="#hero" class="hover:text-tsumuguPink transition-colors">ホーム / キャッチコピー</a></li>
+              <li><a href="#about" class="hover:text-tsumuguPink transition-colors">ツムプロについて</a></li>
+              <li><a href="#stage" class="hover:text-tsumuguPink transition-colors">舞台</a></li>
+              <li><a href="#news" class="hover:text-tsumuguPink transition-colors">お知らせ</a></li>
+              <li><a href="#contact" class="hover:text-tsumuguPink transition-colors">お問い合わせ</a></li>
             </ul>
           </div>
           <div class="space-y-4">
-            <h4
-              class="text-sm font-black text-tsumuguPink tracking-widest border-b-2 border-tsumuguPink/20 pb-1 inline-block"
-            >
-              CONTACT
-            </h4>
+            <h4 class="text-sm font-black text-tsumuguPink tracking-widest border-b-2 border-tsumuguPink/20 pb-1 inline-block">CONTACT</h4>
             <div class="text-xs font-bold text-neutral-600 space-y-2">
-              <p>
-                <i class="fa-solid fa-envelope text-tsumuguPink mr-2"></i
-                >tsumupro.art@gmail.com
-              </p>
-              <p>
-                <i class="fa-brands fa-instagram text-tsumuguPink mr-2"></i
-                >@tsumupro
-              </p>
+              <p><i class="fa-solid fa-envelope text-tsumuguPink mr-2"></i>tsumupro.art@gmail.com</p>
+              <p><i class="fa-brands fa-instagram text-tsumuguPink mr-2"></i>@tsumupro</p>
             </div>
             <div class="flex space-x-3 pt-2">
-              <a
-                href="#"
-                class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguPink shadow-sm hover:bg-tsumuguPink hover:text-white transition-colors"
-                ><i class="fa-brands fa-instagram text-sm"></i
-              ></a>
-              <a
-                href="#"
-                class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguBlue shadow-sm hover:bg-tsumuguBlue hover:text-white transition-colors"
-                ><i class="fa-brands fa-x-twitter text-sm"></i
-              ></a>
+              <a href="https://www.instagram.com/tsumupro/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguPink shadow-sm hover:bg-tsumuguPink hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-tsumuguBlue shadow-sm hover:bg-tsumuguBlue hover:text-white transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
             </div>
           </div>
         </div>
-        <div
-          class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 font-bold"
-        >
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 font-bold">
           <p>© 2026 TSUMUGU ART PROJECT. All Rights Reserved.</p>
-          <a
-            href="#hero"
-            class="mt-4 md:mt-0 flex items-center space-x-2 text-tsumuguBlue hover:text-tsumuguPink transition-colors group"
-          >
+          <a href="#hero" class="mt-4 md:mt-0 flex items-center space-x-2 text-tsumuguBlue hover:text-tsumuguPink transition-colors group">
             <span>TOPに戻る</span>
-            <span
-              class="w-8 h-8 bg-white border-2 border-tsumuguBlue rounded-full flex items-center justify-center group-hover:-translate-y-1 transition-transform"
-              ><i class="fa-solid fa-arrow-up"></i
-            ></span>
+            <span class="w-8 h-8 bg-white border-2 border-tsumuguBlue rounded-full flex items-center justify-center group-hover:-translate-y-1 transition-transform"><i class="fa-solid fa-arrow-up"></i></span>
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
       const menuBtn = document.getElementById("menuBtn");
       const menuClose = document.getElementById("menuClose");
@@ -912,12 +479,10 @@
       }
       setInterval(nextSlide, 3500);
 
-      // --- GSAP & ScrollTrigger: 1枚の大きな掲示板スクロール ---
       window.addEventListener("load", () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const wrapper = document.querySelector(".horizontal-inner");
-        // max-contentで広がった全体の幅から、画面幅を引いてスクロール量を算出
         let scrollWidth = wrapper.scrollWidth - window.innerWidth;
 
         gsap.to(wrapper, {
